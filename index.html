@@ -1,29 +1,56 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Мое портфолио</title>
 </head>
 
 <body>
     <div class="container">
-        <h1 class="title">Hello, I'm from Ukraine. <br>
-            Russian military ship go fuck yourself.
-        </h1>
-        <div class="info">
-            <img class="img" src="./image/DSC_0057_Виза_США.jpg" alt="">
-            <h3 class="suptitle">Oleh Kyrylenko</h3>
-        </div>
-        <h4>My works</h4>
-        <ul class="list">
-            <li><a class="link" href="./lp-data-process/" target="_blank">Data Process - landing page</a></li>
-            <li><a class="link" href="./Hungry/" target="_blank">Hungry</a></li>
-            <li><a class="link" href="./wine card/" target="_blank">Wine card</a></li>
-        </ul>
+        <header class="header">
+            <h1 class="header__title">Hi there, I’m from Ukraine. <br>
+                russian military ship go fuck yourself.</h1>
+        </header>
+
+        <section class="info">
+            <div class="container">
+                <div class="info__img">
+                    <img src="./image/DSC_0057_Виза_США.jpg" alt="photo">
+                </div>
+                <div class="info__name">Oleh Kyrylenko</div>
+                <p class="info__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eveniet, nesciunt
+                    amet in quis aliquam facere reiciendis! Libero, iure ea?
+                </p>
+            </div>
+        </section>
+
+        <section class="description">
+            <div class="description__wrapper">
+                <div class="skills">
+                    <h4>Skills</h4>
+                    <ul class="skills__list">
+                        <li class="skills__link">HTML 5</li>
+                        <li class="skills__link">CSS 3</li>
+                        <li class="skills__link">JS</li>
+                    </ul>
+                </div>
+                <div class="works">
+                    <h4>Works</h4>
+                    <ul class="works__list">
+                        <li class="works__link"><a href="./lp-data-process/" target="_blank">Data Process - landing
+                                page</a>
+                        </li>
+                        <li class="works__link"><a class="link" href="./Hungry/" target="_blank">Hungry</a></li>
+                        <li class="works__link"><a class="link" href="./wine card/" target="_blank">Wine card</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 
