@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main_color: #070707;
+    --secondary_color: #828282;
+    --bgc: #F6F6F6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container {
+    max-width: 970px;
+    padding: 0 15px 0 15px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    margin-bottom: 40px;
+}
+
+.header__nav {
+    padding: 33px 0;
+    border-bottom: 1px solid var(--secondary_color);
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav__link {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--secondary_color);
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color: var(--main_color);
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    min-width: 940px;
+    padding: 20px;
+    background-color: var(--secondary_color);
+    opacity: 0.8;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px var(--secondary_color);
+
+}
+
+.sticky a {
+    color: #fff;
+}
+
+/* Info */
+
+.home {
+    margin-bottom: 105px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 40px;
+
+}
+
+.info__img {
+    max-width: 100%;
+}
+
+.info__name {
+    font-size: 48px;
+    line-height: 59px;
+    font-weight: 700;
+    color: #070707;
+    max-width: 120px;
+}
+
+.info__prof {
+    font-size: 18px;
+    color: var(--main_color);
+    max-width: 170px;
+
+}
+
+.info__lang {
+    margin-bottom: 18px;
+    transform: rotate(-90deg);
+}
+
+.info__lang span {
+    color: var(--secondary_color);
+}
+
+
+/* About me */
+
+.about {
+    padding: 100px 0;
+    background-color: var(--bgc);
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--main_color);
+}
+
+.about__title {
+    margin-bottom: 18px;
+}
+
+.text {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 520px;
+}
+
+.about__text {
+    margin-bottom: 50px;
+}
+
+/* Skills */
+
+.skills {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.skills__title {
+    margin-bottom: 70px;
+}
+
+.skills__text {
+    margin-bottom: 83px;
+}
+
+.skills__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Portfolio */
+
+.portfolio {
+    background-color: var(--bgc);
+    text-align: center;
+    padding: 100px 0;
+}
+
+
+.portfolio__title {
+    margin-bottom: 47px;
+}
+
+.portfolio__item {
+    margin-bottom: 100px;
+}
+
+.portfolio__img {
+    width: 100%;
+}
+
+.portfolio__link {
+    display: block;
+    margin-top: 45px;
+    color: var(--main_color)
+}
+
+.portfolio__link:hover {
+    color: purple;
+}
+
+/* Contacts*/
+
+.contacts {
+    padding: 115px 0;
+
+}
+
+.contacts__title {
+    margin-bottom: 20px;
+}
+
+.contacts__text {
+    max-width: 275px;
+    margin-bottom: 45px;
+}
+
+.contacts__btn {
+    text-align: center;
+    transition: all 0.3s ease;
+
+}
+
+.btn {
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--main_color);
+    border-radius: 30px;
+    padding: 13px 30px;
+    text-decoration: none;
+}
+
+.contacts__btn:hover {
+    transform: translate(1px, 1px);
+}
+
+
+.contacts__social {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 324px;
+    margin-top: 91px;
+    margin-bottom: 45px;
+}
+
+
+
+.contacts__like {
+    font-size: 14px;
+    text-align: center;
+    color: #828282;
+
+}
