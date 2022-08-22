@@ -16,3 +16,12 @@ function myFunction() {
         navbar.classList.remove("sticky");
     }
 }
+
+
+let menuBtn = document.querySelector('.menu__hamb');
+let menu = document.querySelector('.menu_hamb-list');
+
+menuBtn.addEventListener('click', function () {
+    menuBtn.classList.toggle('active');
+    menu.classList.toggle('active');
+})

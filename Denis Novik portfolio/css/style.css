@@ -87,6 +87,10 @@ body {
     max-width: 100%;
 }
 
+.info__img-mobile {
+    display: none;
+}
+
 .info__name {
     font-size: 48px;
     line-height: 59px;
@@ -244,5 +248,54 @@ body {
     font-size: 14px;
     text-align: center;
     color: #828282;
+
+}
+
+/* Media */
+
+@media (max-width: 768px) {
+    .header__nav {
+        display: none;
+    }
+
+    .info {
+        align-items: start;
+        flex-direction: column;
+        padding-left: 40px;
+    }
+
+    .info__name {
+        margin-bottom: 23px;
+    }
+
+    .info__lang {
+        display: none;
+    }
+
+    .info__img {
+        display: none;
+    }
+
+    .info__img-mobile {
+        display: block;
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .about__text {
+        max-width: 375px;
+    }
+
+    .skills__items {
+        display: block;
+    }
+
+    .portfolio__item {
+        padding: 0 30px;
+    }
+
+    .btn {
+        padding: 13px 90px;
+    }
 
 }
