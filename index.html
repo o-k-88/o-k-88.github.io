@@ -1,116 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <meta charset="utf-8">
-    <!-- <base href="/"> -->
-
-    <title>
-        Portfolio
-    </title>
-    <meta name="description" content="Startup HTML template OptimizedHTML 5">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <link rel="icon" href="images/favicon.png">
-    <meta property="og:image" content="images/dist/preview.jpg">
-
-    <link rel="stylesheet" href="css/app.min.css">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/OK _logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Portfolio</title>
 </head>
 
-
-
-
-<header class="header">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="header__logo">O.K.</div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<section class="about">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col">
-                <strong>Hi there,</strong>
-                <h1 class="about__title">I Am Frontend Developer</h1>
-                <p class="about__text">My name is Oleh Kyrylenko and from Ukraine</p>
-                <ul class="about__list">
-                    <li><a class="about__link" href="https://www.instagram.com/kyrylenkoo/" target="_blank"><img
-                                src="./images/dist/social/instagram.png" alt=""></a>
-                    </li>
-                    <li><a class="about__link" href="https://www.facebook.com/profile.php?id=100000201188910"
-                            target="_blank"><img src="./images/dist/social/facebook-logo.png" alt=""></a>
-                    </li>
+<body>
+    <header class="header" id="home">
+        <div class="container">
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link">Home</a></li>
+                    <li><a href="#about" class="nav__link">About me</a></li>
+                    <li><a href="#skills" class="nav__link">Skills</a></li>
+                    <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                    <li><a href="#contacts" class="nav__link">Contacts</a></li>
                 </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <div class="intro__wrapper">
+                <h1 class="intro__name">Oleh Kyrylenko</h1>
+                <h2 class="intro__position">Web designer / developer</h2>
+            </div>
+            <div class="intro__img">
+                <img src="./images/IMG_0504(2).jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h3 class="about__title title">About me</h3>
+            <div class="about__text text">
+                <p>Hi there, my name is Oleh and I'm from Ukraine.<br> IT was always my hobbie, which turned out into my
+                    primary profession. </p>
+                <p>Code is the same language as English or Ukrainian,<br> except that it helps you communicate with
+                    machines, not people.</p>
+                <p>It is cool to possess a webpage and I'm here to help you to get one.</p>
 
             </div>
-            <div class="col">
-                <div class="about__image">
-                    <img src="./images/dist/OK img.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="skills__wrapper">
+                <h3 class="skills__title title">Skills</h3>
+                <div class="skills__text text">This is what I'm good at</div>
+                <div class="skills__items">
+                    <div class="skill__item">
+                        <img src="./images/skills/git.png" alt="git" class="skill__item-img">
+                    </div>
+                    <div class="skill__item">
+                        <img src="./images/skills/Figma.png" alt="figma" class="skill__item-img">
+                    </div>
+                    <div class="skill__item">
+                        <img src="./images/skills/Indesign.png" alt="Id" class="skill__item-img">
+                    </div>
+                    <div class="skill__item">
+                        <img src="./images/skills/PS.png" alt="Ps" class="skill__item-img">
+                    </div>
+                    <div class="skill__item">
+                        <img src="./images/skills/HTML_CSS.png" alt="Html/css" class="skill__item-img">
+                    </div>
+                    <div class="skill__item">
+                        <img src="./images/skills/JS.png" alt="JS" class="skill__item-img">
+                    </div>
+                    <div class="skill__item">
+                        <img src="./images/skills/PHP.png" alt="php" class="skill__item-img">
+                    </div>
+                    <div class="skill__item">
+                        <img src="./images/skills/Wordpress.png" alt="Wordpress" class="skill__item-img">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="portfolio">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col">
-                <h2 class="portfolio__title">My Portfolio</h2>
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h3 class="skills__title title">Portfolio</h3>
+            <div class="skills__text text">Let me introduce my works</div>
+            <div class="slider">
+                <div class="slider__item">
+                    <a href="https://www.kkprovitrum.at/?lang=en" target="_blank"><img
+                            src="./images/Portfolio/KKPorvitrum.jpg" alt=""></a>
+                    <a class="slider__link" href="https://www.kkprovitrum.at/?lang=en" target="_blank">K&K Provitrum
+                        website
+                        →</a>
+                </div>
+                <div class="slider__item">
+                    <a href="./travel project/" target="_blank"><img src="./images/Portfolio/Go trip.jpg" alt=""></a>
+                    <a class="slider__link" href="./travel project/" target="_blank">Go Trip website →</a>
+                </div>
+                <div class="slider__item">
+                    <a href="./Hungry/" target="_blank"><img src="./images/Portfolio/Hungry.jpg" alt=""></a>
+                    <a class="slider__link" href="./Hungry/" target="_blank">Hungry website →</a>
+                </div>
+                <div class="slider__item">
+                    <a href="./lp-data-process/" target="_blank"><img src="./images/Portfolio/lp-process.jpg"
+                            alt=""></a>
+                    <a class="slider__link" href="./lp-data-process/" target="_blank">lp-data-process website →</a>
+                </div>
+                <div class="slider__item">
+                    <a href="./Denis Novik portfolio/" target="_blank"><img src="./images/Portfolio/Denis_Novik.jpg"
+                            alt=""></a>
+                    <a class="slider__link" href="./Denis Novik portfolio/" target="_blank">Denis Novik website →</a>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="portfolio__item">
-                        <img class="portfolio__img" src="./images/dist/New folder/lp-data-process.png" alt="">
-                        <div class="portfolio__desc">Data-process</div>
-                        <a class="portfolio__link" href="./lp-data-process/" target="_blank">Go to website</a>
+        </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h3 class="contacts__title title">Contacts</h3>
+            <div class="contacts__text text">Feel free to reach me out</div>
+            <div class="contacts__info">
+                <div class="info__item">
+                    <a href="mailto:okyrylenko2022@gmail.com" target="_blank"><img
+                            src="./images/contacts/envelope-solid.svg" alt="email"></a>
+                    <div class="info__desc">
+                        <div class="info__name">Email</div>
+                        <div class="info__text">okyrylenko2022@gmail.com</div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="portfolio__item">
-                        <img class="portfolio__img" src="./images/dist/New folder/Hungry.png" alt="">
-                        <div class="portfolio__desc">Hungry</div>
-                        <a class="portfolio__link" href="./Hungry/" target="_blank">Go to website</a>
+                <div class="info__item">
+                    <a href="tel:+1412463-53-76"><img src="./images/contacts/phone-call.png" alt="phone"></a>
+                    <div class="info__desc">
+                        <div class="info__name">Phone</div>
+                        <div class="info__text">+1(412)463-53-76</div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="portfolio__item">
-                        <img class="portfolio__img" src="./images/dist/New folder/Wine card.png" alt="">
-                        <div class="portfolio__desc">Wine card</div>
-                        <a class="portfolio__link" href="./wine card/" target="_blank">Go to website</a>
+                <div class="info__item">
+                    <a href="https://www.olehkyrylenko.tk/" target="_blank"><img
+                            src="./images/contacts/world-wide-web.png" alt="web"></a>
+                    <div class="info__desc">
+                        <div class="info__name">Website</div>
+                        <div class="info__text">olehkyrylenko.tk</div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="portfolio__item">
-                        <img class="portfolio__img" src="./images/dist/New folder/travel.jpg" alt="">
-                        <div class="portfolio__desc">Travel project</div>
-                        <a class="portfolio__link" href="./travel project/" target="_blank">Go to website</a>
+            </div>
+            <h4 class="social__title">Social media</h4>
+            <div class="contacts__social">
+                <div class="social__item">
+                    <div class="social__img">
+                        <a href="https://www.instagram.com/kyrylenkoo/" target="_blank"><img
+                                src="./images/social/instagram.png" alt="insta"></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="portfolio__item">
-                        <img class="portfolio__img" src="./images/dist/New folder/Denis Novikov.jpg" alt="">
-                        <div class="portfolio__desc">Denis Novik portfolio</div>
-                        <a class="portfolio__link" href="./Denis Novik portfolio/" target="_blank">Go to website</a>
+                <div class="social__item">
+                    <div class="social__img">
+                        <a href="https://www.facebook.com/profile.php?id=100000201188910" target="_blank"><img
+                                src="./images/social/facebook.png" alt="fb"></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="portfolio__item">
-                        <img class="portfolio__img" src="./images/dist/New folder/K&k.jpg" alt="">
-                        <div class="portfolio__desc">K&K Provitrum</div>
-                        <a class="portfolio__link" href="https://www.kkprovitrum.at/?lang=en" target="_blank">Go to
-                            website</a>
+                <div class="social__item">
+                    <div class="social__img">
+                        <a href="https://www.linkedin.com/in/oleh-kyrylenko-155743146/" target="_blank"> <img
+                                src="./images/social/linkedin.png" alt="linkedin"></a>
+                    </div>
+                </div>
+                <div class="social__item">
+                    <div class="social__img">
+                        <a href="https://www.youtube.com/channel/UCUk7k_AnHRg0gcuGoHbk-9A" target="_blank"><img
+                                src="./images/social/youtube.png" alt=""></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__text">©2022 Oleh Kyrylenko</div>
+        </div>
+    </footer>
+
+    <!-- Libs -->
+    <script src="./libs/jquery-3.6.1.min.js"></script>
+    <script src="./libs/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

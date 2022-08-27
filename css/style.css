@@ -1,0 +1,337 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: var(--main_color);
+}
+
+:root {
+    --main_color: #070707;
+    --secondary_color: #828282;
+    --bgc: #F6F6F6;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* Common styles */
+.title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--main_color);
+    margin-bottom: 40px;
+}
+
+.text {
+    text-align: center;
+    font-size: 18px;
+    color: var(--main_color);
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+/* Header */
+.header {
+    padding: 40px 0;
+    background-color: var(--bgc);
+}
+
+.nav {}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__link {
+    font-size: 18px;
+    color: var(--main_color);
+    font-weight: 600;
+    padding: 20px;
+
+}
+
+.nav__link:hover {
+    color: var(--secondary_color);
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    min-width: 1200px;
+    padding: 20px;
+    background-color: var(--secondary_color);
+    opacity: 0.7;
+    border-radius: 4px;
+}
+
+.sticky a {
+    color: #fff;
+}
+
+.nav.sticky a:hover {
+    color: var(--main_color);
+}
+
+/* About */
+
+
+.intro {
+    padding: 100px 0;
+    margin-top: 100px 0;
+}
+
+.intro__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+
+.intro__name {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--main__color);
+    line-height: 1.1;
+}
+
+.intro__position {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--secondary_color);
+}
+
+.intro__img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* About */
+
+.about {
+    background-color: var(--bgc);
+    padding: 100px 0;
+}
+
+.about__title {
+    margin-bottom: 40px;
+}
+
+
+.about__text p {
+    margin-bottom: 40px;
+}
+
+/* Skills */
+
+.skills {
+    padding: 100px 0;
+}
+
+
+.skills__title {
+    margin-bottom: 40px;
+}
+
+.skills__text {
+    margin-bottom: 40px;
+}
+
+.skills__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.skill__item {
+    min-width: 250px;
+    padding: 30px;
+}
+
+.skill__item-img {
+    width: 100%;
+}
+
+
+
+/* Portfolio */
+
+.portfolio {
+    padding: 100px 0;
+    background-color: var(--bgc);
+}
+
+/* Slider */
+.slider__item {
+    text-align: center;
+}
+
+.slider__item img {
+    border-radius: 10px;
+}
+
+.slider__link {
+    margin: 10px 0;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: var(--secondary_color);
+    font-weight: 700;
+    transition: all .3s;
+}
+
+.slider__link:hover {
+    color: var(--main_color);
+}
+
+
+.slider .slick-track {
+    display: flex;
+    align-items: flex-start;
+}
+
+.slider .slick-list {
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    padding: 0 50px;
+}
+
+
+.slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 50px;
+    border: 0;
+    cursor: pointer;
+}
+
+.slider .slick-arrow.slick-prev {
+    left: 0;
+    background: url('../images/back.png') 0 0 / 100% no-repeat;
+}
+
+.slider .slick-arrow.slick-next {
+    right: 0;
+    background: url('../images/next.png') 0 0 / 100% no-repeat;
+}
+
+.slider .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .slick-dots li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.slider .slick-dots li button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--main_color);
+}
+
+.slider .slick-dots li.slick-active button {
+    background-color: var(--main_color);
+}
+
+/* End Slider */
+
+
+/* Contacts */
+
+
+.contacts {
+    padding: 100px 0;
+}
+
+.contacts__title {}
+
+.contacts__text {}
+
+.contacts__info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 80px;
+}
+
+
+.info__item {
+    display: flex;
+    align-items: center;
+}
+
+.info__item img {
+    height: 60px;
+    width: 60px;
+}
+
+.info__desc {
+    margin-left: 10px;
+}
+
+.info__name {
+    font-size: 15px;
+    color: var(--main_color);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.info__text {
+    font-size: 15px;
+    color: var(--secondary_color);
+    font-weight: 500;
+}
+
+.contacts__social {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social__title {
+    text-align: center;
+    font-size: 18px;
+    color: var(--main_color);
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.social__item {}
+
+.social__img {}
+
+/* Footer */
+
+.footer {
+    padding: 30px 0;
+    background-color: var(--main_color);
+}
+
+.footer__text {
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+}
