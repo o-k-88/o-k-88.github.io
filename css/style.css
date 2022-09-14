@@ -74,7 +74,7 @@ body {
     border-radius: 4px;
     display: flex;
     flex-direction: column;
-    gap: 20px 0;
+    gap: 10px 0;
 }
 
 .sticky a {
@@ -178,6 +178,7 @@ body {
 /* Slider */
 .slider__item {
     text-align: center;
+    margin: 0 10px;
 }
 
 .slider__item img {
@@ -282,6 +283,13 @@ body {
     display: flex;
     align-items: center;
     padding: 10px;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.info__item:hover {
+    background-color: var(--bgc);
+    border-radius: 20px;
 }
 
 .info__item img {
@@ -317,6 +325,15 @@ body {
     color: var(--main_color);
     font-weight: 500;
     margin-bottom: 40px;
+}
+
+.social__img {
+    transition: all .3s linear;
+}
+
+.social__img img:hover {
+    background-color: var(--bgc);
+    border-radius: 20px;
 }
 
 
