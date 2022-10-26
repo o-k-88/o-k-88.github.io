@@ -5,220 +5,296 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/OK _logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fontello.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/media.css">
-    <title>Portfolio</title>
+    <title>Oleh Kyrylenko</title>
 </head>
 
 <body>
-    <header class="header" id="home">
-        <div class="container">
-            <nav class="nav">
-                <ul class="nav__list" id="nav">
-                    <li><a href="#home" class="nav__link">Home</a></li>
-                    <li><a href="#about" class="nav__link">About me</a></li>
-                    <li><a href="#skills" class="nav__link">Skills</a></li>
-                    <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
-                    <li><a href="#contacts" class="nav__link">Contacts</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient">
+            <div class="container">
+                <a class="navbar-brand" href="#">O.K.</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav  text-center ms-auto">
+                        <li class="nav-item me-2">
+                            <a href="#about" class="nav-link">About me</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a href="#skills" class="nav-link">Skills</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a href="#projects" class="nav-link">Projects</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a href="#footer" class="nav-link">Contact me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <section class="intro">
-        <div class="container">
-            <div class="intro__wrapper">
-                <h1 class="intro__name">Oleh Kyrylenko</h1>
-                <h2 class="intro__position">Web designer / developer</h2>
-            </div>
-        </div>
-        <div class="intro__img">
-            <img src="./images/IMG_0504(2).jpg" alt="">
-        </div>
-    </section>
 
     <section class="about" id="about">
         <div class="container">
-            <h3 class="about__title title">About me</h3>
-            <div class="about__text text">
-                <p>Hi there, my name is Oleh and I'm from Ukraine.<br> IT was always my hobbie, which turned out into my
-                    primary profession. </p>
-                <p>Code is the same language as English or Ukrainian,<br> except that it helps you communicate with
-                    machines, not people.</p>
-                <p>It is cool to possess a webpage and I'm here to help you to get one.</p>
-
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <h3 class=" text-center text-uppercase color1 fw-bold">About</h3>
+                    <div class="line1 "></div>
+                </div>
             </div>
+            <div class="row ">
+                <div class="col-lg-8 col-sm-12">
+                    <h4>Oleh Kyrylenko</h3>
+                        <p class="mb-4">Front End Webdeveloper since 2019. </p>
+                        <p>
+                            Hi there, my name is Oleh and I'm from Ukraine.
+                            I work primarily in HTML, CSS and JavaScript. I learned them on my own using both free and
+                            paid training resources.
+                        </p>
+
+                        <p>
+                            Most recently, I worked as Web Developer at K&K Provitrum, where my main responsibilities
+                            were to manage and update content, as well as to design and establish user-friendly website,
+                            including responsive design. As part of this project, I also worked with Wordpress and PHP.
+                        </p>
+
+                        <p>Prior to that, I work on the CryptoMender web app as a User Acquisition Lead and UX/UI
+                            Designer. While testing and improving the design of the app, as well designing advertising
+                            banners and the logo, I also worked with Figma, PhotoShop, and InDesign.</p>
+
+                        <p>While working on IT projects I focus on the efficiency of execution, which I learned while
+                            professionally playing and coaching soccer in the US, Spain and my native Ukraine. Web
+                            development started as my hobby, but over the last four years, it has truly become my
+                            profession.
+                        </p>
+                </div>
+                <div class="col-lg-4 col-sm-12 d-none d-lg-block">
+                    <img class="img-fluid"
+                        src="./images/communication-between-computer-and-mobile-phone-svgrepo-com.svg" alt="">
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <section class="skills" id="skills">
-        <div class="container">
-            <div class="skills__wrapper">
-                <h3 class="skills__title title">Skills</h3>
-                <div class="skills__text text">This is what I'm good at</div>
-                <div class="skills__items">
-                    <div class="skill__item">
-                        <img src="./images/skills/git.png" alt="git" class="skill__item-img">
-                    </div>
-                    <div class="skill__item">
-                        <img src="./images/skills/Figma.png" alt="figma" class="skill__item-img">
-                    </div>
-                    <div class="skill__item">
-                        <img src="./images/skills/Indesign.png" alt="Id" class="skill__item-img">
-                    </div>
-                    <div class="skill__item">
-                        <img src="./images/skills/PS.png" alt="Ps" class="skill__item-img">
-                    </div>
-                    <div class="skill__item">
-                        <img src="./images/skills/HTML_CSS.png" alt="Html/css" class="skill__item-img">
-                    </div>
-                    <div class="skill__item">
-                        <img src="./images/skills/JS.png" alt="JS" class="skill__item-img">
-                    </div>
-                    <div class="skill__item">
-                        <img src="./images/skills/PHP.png" alt="php" class="skill__item-img">
-                    </div>
-                    <div class="skill__item">
-                        <img src="./images/skills/Wordpress.png" alt="Wordpress" class="skill__item-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="portfolio" id="portfolio">
+    <section class="skills bg-light" id="skills">
         <div class="container">
-            <h3 class="skills__title title">Portfolio</h3>
-            <div class="skills__text text">Let me introduce my works</div>
-            <div class="slider">
-                <div class="slider__item">
-                    <a href="./Activebox(completed)/" target="_blank"><img src="./images/Portfolio/Active box.jpg"
-                            alt=""></a>
-                    <a class="slider__link" href="./Activebox(completed)/" target="_blank">Your first webpage →</a>
-                </div>
-                <div class="slider__item">
-                    <a href="./Mogo(completed)/" target="_blank"><img src="./images/Portfolio/Mogo.jpg" alt=""></a>
-                    <a class="slider__link" href="./Mogo(completed)/" target="_blank">Your first webpage →</a>
-                </div>
-                <div class="slider__item">
-                    <a href="./Viking(completed)/" target="_blank"><img src="./images/Portfolio/Vickings.jpg"
-                            alt=""></a>
-                    <a class="slider__link" href="./Viking(completed)/" target="_blank">Your first webpage →</a>
-                </div>
-                <div class="slider__item">
-                    <a href="./Your first webpage/" target="_blank"><img src="./images/Portfolio/First page.jpg"
-                            alt=""></a>
-                    <a class="slider__link" href="./Your first webpage/" target="_blank">Your first webpage →</a>
-                </div>
-                <div class="slider__item">
-                    <a href="https://www.kkprovitrum.at/?lang=en" target="_blank"><img
-                            src="./images/Portfolio/KKPorvitrum.jpg" alt=""></a>
-                    <a class="slider__link" href="https://www.kkprovitrum.at/?lang=en" target="_blank">K&K Provitrum
-                        website
-                        →</a>
-                </div>
-                <div class="slider__item">
-                    <a href="./travel project/" target="_blank"><img src="./images/Portfolio/travel project.jpg"
-                            alt=""></a>
-                    <a class="slider__link" href="./travel project/" target="_blank">Go Trip website
-                        →</a>
-                </div>
-                <div class="slider__item">
-                    <a href="./Hungry/" target="_blank"><img src="./images/Portfolio/Hungry.jpg" alt=""></a>
-                    <a class="slider__link" href="./Hungry/" target="_blank">Hungry website →</a>
-                </div>
-                <div class="slider__item">
-                    <a href="./lp-data-process/" target="_blank"><img src="./images/Portfolio/lp-data-proccess.jpg"
-                            alt=""></a>
-                    <a class="slider__link" href="./lp-data-process/" target="_blank">lp-data-process website →</a>
-                </div>
-                <div class="slider__item">
-                    <a href="./Denis Novik portfolio/" target="_blank"><img src="./images/Portfolio/Denis Novik.jpg"
-                            alt=""></a>
-                    <a class="slider__link" href="./Denis Novik portfolio/" target="_blank">Denis Novik website →</a>
-                </div>
-                <div class="slider__item">
-                    <a href="./wine card/" target="_blank"><img src="./images/Portfolio/Wine card.jpg" alt=""></a>
-                    <a class="slider__link" href="./wine card/" target="_blank">Your first webpage →</a>
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <h3 class=" text-center text-uppercase color1 fw-bold">Skills</h3>
+                    <div class="line1"></div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="contacts" id="contacts">
-        <div class="container">
-            <h3 class="contacts__title title">Contacts</h3>
-            <div class="contacts__text text">Feel free to reach me out</div>
-            <div class="contacts__info">
-                <div class="info__item">
-                    <a href="mailto:okyrylenko2022@gmail.com" target="_blank"><img
-                            src="./images/contacts/envelope-solid.svg" alt="email"></a>
-                    <div class="info__desc">
-                        <div class="info__name">Email</div>
-                        <div class="info__text">okyrylenko2022@gmail.com</div>
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="design">
+                        <h6 class="text-center text-uppercase">UI/UX Design</h6>
+                        <div class="item">
+                            <p>Figma</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                    style="width: 90%;">90%</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>PhotoShop</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                    style="width: 65%;">65%</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>InDesign</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                    style="width: 55%;">55%</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Github</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                    style="width: 60%;">60%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="info__item">
-                    <a href="tel:+1412463-53-76"><img src="./images/contacts/phone-call.png" alt="phone"></a>
-                    <div class="info__desc">
-                        <div class="info__name">Phone</div>
-                        <div class="info__text">+1(412)463-53-76</div>
-                    </div>
-                </div>
-                <div class="info__item">
-                    <a href="https://www.olehkyrylenko.tk/" target="_blank"><img
-                            src="./images/contacts/world-wide-web.png" alt="web"></a>
-                    <div class="info__desc">
-                        <div class="info__name">Website</div>
-                        <div class="info__text">olehkyrylenko.tk</div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="social__title">Social media</h4>
-            <div class="contacts__social">
-                <div class="social__item">
-                    <div class="social__img">
-                        <a href="https://www.instagram.com/kyrylenkoo/" target="_blank"><img
-                                src="./images/social/instagram.png" alt="insta"></a>
-                    </div>
-                </div>
-                <div class="social__item">
-                    <div class="social__img">
-                        <a href="https://www.facebook.com/profile.php?id=100000201188910" target="_blank"><img
-                                src="./images/social/facebook.png" alt="fb"></a>
-                    </div>
-                </div>
-                <div class="social__item">
-                    <div class="social__img">
-                        <a href="https://www.linkedin.com/in/oleh-kyrylenko-155743146/" target="_blank"> <img
-                                src="./images/social/linkedin.png" alt="linkedin"></a>
-                    </div>
-                </div>
-                <div class="social__item">
-                    <div class="social__img">
-                        <a href="https://www.youtube.com/channel/UCUk7k_AnHRg0gcuGoHbk-9A" target="_blank"><img
-                                src="./images/social/youtube.png" alt=""></a>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="webDev">
+                        <h6 class="text-center text-uppercase">Web Development</h6>
+                        <div class="item">
+                            <p>HTML5</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"
+                                    style="width: 90%;">90%</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>CSS3</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"
+                                    style="width: 90%;">90%</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>JavaScript</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"
+                                    style="width: 35%;">35%</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>PHP</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark"
+                                    style="width: 35%;">35%</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <footer class="footer">
+    <section class="projects" id="projects">
         <div class="container">
-            <div class="footer__text">©2022 Oleh Kyrylenko</div>
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <h3 class=" text-center text-uppercase color1 fw-bold">Projects</h3>
+                    <div class="line1"></div>
+                </div>
+            </div>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6  col-sm-12">
+                    <div class="card">
+                        <img src="./images/projects/todo.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">ToDo App reminds you what needs to be done for today</h5>
+                            <a href="./projects/todoApp(completed)" target="_blank" class="btn btn-secondary">Go to
+                                App</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card">
+                        <img src="./images/projects/quiz.jpg" class="card-img-top" alt="quiz">
+                        <div class="card-body">
+                            <h5 class="card-title">Quiz App May change questions depends on your needs</h5>
+                            <a href="./projects/js-simple-quiz (completed)" target="_blank" class="btn btn-secondary">Go
+                                to
+                                Quiz
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card">
+                        <img src="./images/projects/converter.jpg" class="card-img-top" alt="quiz">
+                        <div class="card-body">
+                            <h5 class="card-title">Currency converter allows you to check currency rate</h5>
+                            <a href="./projects/converter(completed)/" target="_blank" class="btn btn-secondary">Go
+                                to Converter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card">
+                        <img src="./images/projects/Vickings.jpg" class="card-img-top" alt="quiz">
+                        <div class="card-body">
+                            <h5 class="card-title">Vikings website</h5>
+
+                            <a href="./projects/Viking(completed)" target="_blank" class="btn btn-secondary">Go
+                                to
+                                Vikings</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card">
+                        <img src="./images/projects/Active box.jpg" class="card-img-top" alt="quiz">
+                        <div class="card-body">
+                            <h5 class="card-title">ActiveBox landing</h5>
+
+                            <a href="./projects/Activebox(completed)/" target="_blank" class="btn btn-secondary">Go
+                                to
+                                ActiveBox</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card">
+                        <img src="./images/projects/Mogo.jpg" class="card-img-top" alt="quiz">
+                        <div class="card-body">
+                            <h5 class="card-title">Mogo landing</h5>
+
+                            <a href="./projects/Mogo(completed)" target="_blank" class="btn btn-secondary">Go
+                                to
+                                Mogo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card">
+                        <img src="./images/projects/Denis Novik.jpg" class="card-img-top" alt="quiz">
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio landing</h5>
+
+                            <a href="./projects//Denis Novik portfolio" target="_blank" class="btn btn-secondary">Go
+                                to
+                                Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card">
+                        <img src="./images/projects/KKPorvitrum.jpg" class="card-img-top" alt="quiz">
+                        <div class="card-body">
+                            <h5 class="card-title">K&K Provitrum website</h5>
+
+                            <a href="https://www.kkprovitrum.at/?lang=en" target="_blank" class="btn btn-secondary">Go
+                                to
+                                K&K Provitrum</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <a href="" id="back-to-top">top</a>
+    </section>
+
+
+    <footer class=" bg-dark bg-gradient" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="https://www.instagram.com/kyrylenkoo/" target="_blank" class="btn btn-outline-light"><i
+                            class="icon-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100000201188910" target="_blank"
+                        class="btn btn-outline-light"><i class="icon-facebook-squared"></i></a>
+                    <a href="https://www.linkedin.com/in/oleh-kyrylenko-155743146/" target="_blank"
+                        class="btn btn-outline-light"><i class="icon-linkedin-squared"></i></a>
+                    <a href="https://github.com/o-k-88" target="_blank" class="btn btn-outline-light"><i
+                            class="icon-github-squared"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center mt-3">
+                    <p><a href="mailto:okyrylenko2022@gmail.com">okyrylenko2022@gmail.com</a></p>
+                    <p class="footer__copy">&copy; Oleh Kyrylenko 2022</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- Libs -->
-    <script src="./libs/jquery-3.6.1.min.js"></script>
-    <script src="./libs/slick.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

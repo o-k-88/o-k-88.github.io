@@ -1,383 +1,168 @@
+:root {
+    --color1: #05b1b1;
+    --color2: #52339a;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
+
+
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    color: var(--main_color);
+    font-size: 16px;
+    color: var(--bs-dark);
 }
 
-:root {
-    --main_color: #070707;
-    --secondary_color: #828282;
-    --bgc: #F6F6F6;
-}
-
-.container {
-    max-width: 1230px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
-
-/* Common styles */
-.title {
-    text-align: center;
-    font-size: 34px;
-    font-weight: 700;
-    color: var(--main_color);
-    margin-bottom: 40px;
-}
-
-.text {
-    text-align: center;
-    font-size: 18px;
-    color: var(--main_color);
-    font-weight: 500;
-    margin-bottom: 40px;
-}
-
-/* Header */
-.header {
-    padding: 40px 0;
-    background-color: var(--bgc);
-}
-
-/* .nav {} */
-
-.nav__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav__link {
-    font-size: 18px;
-    color: var(--main_color);
-    font-weight: 600;
-    padding: 20px;
-
-}
-
-.nav__link:hover {
-    color: var(--secondary_color);
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-    position: fixed;
-    top: 0;
-    z-index: 99;
-    padding: 20px;
-    background-color: var(--secondary_color);
-    opacity: 0.7;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px 0;
-}
-
-.sticky a {
-    color: #fff;
-}
-
-.nav__list.sticky a:hover {
-    color: var(--main_color);
-}
-
-/* About */
-
-
-.intro {
-    padding: 100px 0;
-}
-
-.intro__wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-
-.intro__name {
-    font-size: 48px;
-    font-weight: 700;
-    color: var(--main__color);
-    line-height: 1.1;
-}
-
-.intro__position {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--secondary_color);
-}
-
-.intro__img img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* About */
-
-.about {
-    background-color: var(--bgc);
-    padding: 100px 0;
-}
-
-.about__title {
-    margin-bottom: 40px;
-}
-
-
-.about__text p {
-    margin-bottom: 40px;
-}
-
-/* Skills */
-
-.skills {
-    padding: 100px 0;
-}
-
-
-.skills__title {
-    margin-bottom: 40px;
-}
-
-.skills__text {
-    margin-bottom: 40px;
-}
-
-.skills__items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.skill__item {
-    min-width: 250px;
-    padding: 30px;
-}
-
-.skill__item-img {
-    width: 100%;
-}
-
-
-
-/* Portfolio */
-
-.portfolio {
-    padding: 100px 0;
-    background-color: var(--bgc);
-}
-
-/* Slider */
-.slider__item {
-    text-align: center;
-    margin: 0 10px;
-}
-
-.slider__item img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.slider__link {
-    margin: 10px 0;
-    display: block;
-    text-align: center;
-    font-size: 18px;
-    color: var(--secondary_color);
-    font-weight: 700;
-    transition: all .3s;
-}
-
-.slider__link:hover {
-    color: var(--main_color);
-}
-
-
-.slider .slick-track {
-    display: flex;
-    align-items: flex-start;
-}
-
-.slider .slick-list {
-    overflow: hidden;
-}
-
-.slider {
-    position: relative;
-    padding: 0 50px;
-}
-
-
-.slider .slick-arrow {
-    position: absolute;
-    top: 50%;
-    margin-top: -25px;
-    z-index: 10;
-    font-size: 0;
-    width: 30px;
-    height: 50px;
-    border: 0;
-    cursor: pointer;
-}
-
-.slider .slick-arrow.slick-prev {
-    left: 0;
-    background: url('../images/back.png') 0 0 / 100% no-repeat;
-}
-
-.slider .slick-arrow.slick-next {
-    right: 0;
-    background: url('../images/next.png') 0 0 / 100% no-repeat;
-}
-
-.slider .slick-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slider .slick-dots li {
-    list-style: none;
-    margin: 0 10px;
-}
-
-.slider .slick-dots li button {
-    font-size: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 1px solid var(--main_color);
-}
-
-.slider .slick-dots li.slick-active button {
-    background-color: var(--main_color);
-}
-
-/* End Slider */
-
-
-/* Contacts */
-
-
-.contacts {
-    padding: 100px 0;
-}
-
-
-.contacts__info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 80px;
-}
-
-
-.info__item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    transition: all .3s linear;
-    cursor: pointer;
-}
-
-.info__item:hover {
-    background-color: var(--bgc);
-    border-radius: 20px;
-}
-
-.info__item img {
-    height: 60px;
+.line1 {
+    height: 3px;
     width: 60px;
+    margin: 10px auto 20px;
+    background-color: var(--bs-dark);
 }
 
-.info__desc {
-    margin-left: 10px;
+.navbar {
+    padding: 20px 0;
 }
 
-.info__name {
-    font-size: 15px;
-    color: var(--main_color);
-    font-weight: 700;
-    margin-bottom: 5px;
+.about,
+.skills,
+.projects {
+    padding: 100px 0;
 }
 
-.info__text {
-    font-size: 15px;
-    color: var(--secondary_color);
-    font-weight: 500;
+
+@media(max-width: 991px) {
+
+    .about,
+    .skills,
+    .projects {
+        padding: 50px 0;
+    }
 }
 
-.contacts__social {
-    display: flex;
-    justify-content: space-evenly;
-}
+/* .....................Header................................. */
 
-.social__title {
-    text-align: center;
+.nav-link {
+    color: #fff;
     font-size: 18px;
-    color: var(--main_color);
+}
+
+
+/* .....................About................................. */
+
+
+.about h4 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+.about__img {
+    border-radius: 40px;
+}
+
+/* .....................Skills................................. */
+
+
+
+
+
+.design,
+.webDev {
+    /* border-radius: 25px; */
+    /* background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    background-image: var(--bs-gradient) !important; */
+    padding: 30px;
+    box-shadow: 1px 1px 7px 1px rgb(224, 223, 223);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.design h6,
+.webDev h6 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.design p,
+.webDev p {
+    font-size: 15px;
+    margin-bottom: 10px;
     font-weight: 500;
-    margin-bottom: 40px;
 }
 
-.social__img {
-    transition: all .3s linear;
+
+.item {
+    padding: 25px 50px;
 }
 
-.social__img img:hover {
-    background-color: var(--bgc);
+.progress {
+    box-shadow: 1px 1px 7px 1px var(--bs-gray-600);
+    height: 30px;
+    border-radius: 20px;
+}
+
+.progress-bar {
     border-radius: 20px;
 }
 
 
-/* Footer */
 
-.footer {
+
+/* .....................Projects................................. */
+.carousel-item {
+    height: 32rem;
+    background: #777;
+}
+
+/* .....................Projects................................. */
+
+.card {
+    box-shadow: 1px 2px 12px 1px var(--bs-gray-600);
+    border: 0;
+    transition: all .4s linear;
+}
+
+
+
+.card:hover {
+    box-shadow: 1px 2px 20px 1px var(--bs-dark);
+}
+
+
+
+/* .....................Footer................................. */
+
+footer {
     padding: 30px 0;
-    background-color: var(--main_color);
-}
-
-.footer__text {
-    text-align: center;
-    font-size: 13px;
     color: #fff;
 }
 
-/* Back-to-top */
-
-#back-to-top {
-    position: fixed;
-    bottom: 3em;
-    right: 3em;
-    background-color: var(--secondary_color);
-    color: var(--main_color);
-    border: none;
-    border-radius: 5px;
-    padding: 1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 700;
-    transition: all .3s ease-in-out;
-    display: inline-block;
-    opacity: 0;
+footer a {
+    color: #fff;
     text-decoration: none;
-    font-size: 0.75em;
 }
 
-#back-to-top:hover {
-    background-color: var(--main_color);
-    color: #fff;
-    padding: 1em 3em;
-
+footer a:hover {
+    color: var(--bs-gray-600);
 }
 
-#back-to-top.visible {
-    opacity: 1;
+
+footer .btn {
+    background-color: var(--bs-dark);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.footer__copy {
+    font-size: 14px;
 }
