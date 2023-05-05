@@ -11,7 +11,7 @@ form.addEventListener("submit", (e) => {
     weather.innerHTML = html;
   } else {
     const apiKey = "e218dc5b8f13476f98c152716232804";
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName.value.trim()}`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName.value.trim()}`;
 
     fetch(url)
       .then((res) => res.json())
