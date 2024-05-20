@@ -150,20 +150,41 @@ body {
 .header-nav-item {
 }
 .header-nav-item:not(:last-child) {
-  margin-right: 25px;
+  margin-right: 40px;
 }
 .header-nav-link {
   color: var(--color-black);
   text-decoration: none;
-  padding: 5px;
-  border-radius: 4px;
+
   transition: all var(--transition-duration);
   font-size: clamp(14px, 1.83vw, 16px);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
 }
 
-.header-nav-link:hover {
-  color: #8fabba;
-  text-decoration: underline;
+@media (hover: hover) {
+  .header-nav-link:hover::after {
+    width: 100%;
+  }
+}
+@media (hover: none) {
+  .header-nav-link:active::after {
+    width: 100%;
+  }
+}
+.header-nav-link::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition-duration: inherit;
 }
 
 /* Services */
