@@ -283,6 +283,11 @@ body {
 
 .project-swiper {
 }
+.project-swiper .swiper-button-next,
+.project-swiper .swiper-button-prev {
+  color: darkblue;
+}
+
 .projects-list {
   display: grid;
 

@@ -1,4 +1,4 @@
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".project-swiper", {
   // Optional parameters
 
   loop: true,
@@ -15,17 +15,17 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    // when window width is >= 320px
+    // when window width is >= 360px
     360: {
-      slidesPerView: 1,
+      slidesPerView: 1.5,
       spaceBetween: 20,
     },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 2.5,
       spaceBetween: 20,
     },
 
-    // when window width is >= 640px
+    // when window width is >= 1024px
     1024: {
       slidesPerView: 3,
       spaceBetween: 20,
@@ -33,6 +33,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+// Scroll top button
 const scrollTopBtn = document.querySelector("#scrollTop");
 
 function scrollTop() {
