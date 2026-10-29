@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Empire Online A11y</title>
+  <meta name="description" content="Scan Brightspace course exports for accessibility issues in your browser. Files never leave your computer.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Empire Online A11y</h1>
+      <p class="muted">Scan Brightspace exports, find likely accessibility issues, and create a checklist report for remediation.</p>
+      <p class="privacy-note">
+        <strong>Private by design:</strong> the scan runs inside this browser tab. Your course files are not uploaded anywhere.
+      </p>
+      <p id="engine-status" class="engine-status" role="status" aria-live="polite" data-state="loading">
+        Loading the scan engine. The first visit downloads about 18 MB, so this can take a moment.
+      </p>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <div class="tabs" role="tablist" aria-label="Tools">
+      <button type="button" role="tab" id="tab-scan" aria-controls="panel-scan" aria-selected="true">Accessibility Scan</button>
+      <button type="button" role="tab" id="tab-quick" aria-controls="panel-quick" aria-selected="false" tabindex="-1">Quick Check</button>
+      <button type="button" role="tab" id="tab-quiz" aria-controls="panel-quiz" aria-selected="false" tabindex="-1">Quiz Library</button>
+    </div>
+
+    <!-- Accessibility Scan -->
+    <section id="panel-scan" role="tabpanel" aria-labelledby="tab-scan" tabindex="0">
+      <h2>Accessibility Scan</h2>
+
+      <div class="card">
+        <h3>Quick start for beta testers</h3>
+        <ol>
+          <li>Choose the Brightspace export you want to review.</li>
+          <li>Add the optional module-intro ZIP only when you have one.</li>
+          <li>Select Scan and open the HTML report when it is ready.</li>
+        </ol>
+      </div>
+
+      <form id="scan-form" class="stack" novalidate>
+        <div class="field card">
+          <label for="primary-file">Primary Brightspace export <span class="hint">(.imscc or D2LExport .zip, required)</span></label>
+          <input type="file" id="primary-file" accept=".imscc,.zip" required aria-describedby="primary-file-error">
+          <p id="primary-file-error" class="field-error" hidden></p>
+        </div>
+
+        <div class="field card">
+          <label for="intro-file">Optional native Brightspace ZIP for module intros</label>
+          <input type="file" id="intro-file" accept=".zip">
+        </div>
+
+        <div class="field card">
+          <label for="course-id">Brightspace course URL or ID</label>
+          <input type="text" id="course-id" inputmode="url" autocomplete="off" aria-describedby="course-id-hint">
+          <p id="course-id-hint" class="hint">Filled in automatically when the export filename contains the course ID.</p>
+        </div>
+
+        <div class="field card">
+          <label for="custom-terms">Optional custom words, phrases, or Boolean searches to flag</label>
+          <textarea id="custom-terms" rows="3" aria-describedby="custom-terms-hint"></textarea>
+          <p id="custom-terms-hint" class="hint">Use one search per line, or separate simple terms with commas. Matches whole words or exact phrases. Supports AND, OR, NOT, quoted phrases, and -excluded terms.</p>
+        </div>
+
+        <fieldset class="card">
+          <legend>Scan options</legend>
+          <div class="check">
+            <input type="checkbox" id="skip-hidden" checked>
+            <label for="skip-hidden">Skip hidden files when the cartridge identifies them</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="external-links" disabled aria-describedby="external-links-hint">
+            <label for="external-links">Check external links for broken pages</label>
+          </div>
+          <p id="external-links-hint" class="hint indent">Not available in the web version: browsers block pages from checking other websites. Use the desktop app for link checking.</p>
+        </fieldset>
+
+        <fieldset class="card">
+          <legend>Optional course-file maintenance</legend>
+          <div class="check">
+            <input type="checkbox" id="check-files">
+            <label for="check-files">Check unattached files, duplicate files, and files larger than 2 MiB</label>
+          </div>
+          <fieldset id="report-scope" class="indent nested" disabled>
+            <legend class="visually-hidden">Report contents</legend>
+            <div class="check">
+              <input type="radio" name="report-scope" id="scope-combined" value="combined" checked>
+              <label for="scope-combined">Add course-file findings to the accessibility report</label>
+            </div>
+            <div class="check">
+              <input type="radio" name="report-scope" id="scope-files" value="files_only">
+              <label for="scope-files">Create only the unattached, duplicate, and large-file report</label>
+            </div>
+          </fieldset>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" id="scan-button" class="primary">Scan and Create HTML Report</button>
+          <button type="button" id="open-report" disabled>Open Report</button>
+          <a id="download-report" class="button" hidden>Download Report</a>
+        </div>
+      </form>
+
+      <div class="grid-2">
+        <section class="card" aria-labelledby="scan-status-heading">
+          <h3 id="scan-status-heading">Status</h3>
+          <p id="scan-status" class="status-text" role="status" aria-live="polite">Choose a Brightspace Common Cartridge or export ZIP to begin.</p>
+        </section>
+        <section class="card" aria-labelledby="checks-heading">
+          <h3 id="checks-heading">Checks this tool runs</h3>
+          <ul id="checks-list" class="checks-list"></ul>
+        </section>
+      </div>
+    </section>
+
+    <!-- Quick Check -->
+    <section id="panel-quick" role="tabpanel" aria-labelledby="tab-quick" tabindex="0" hidden>
+      <h2>Quick Check</h2>
+      <p class="muted">Paste the raw HTML from one Brightspace HTML page and create a focused accessibility checklist report.</p>
+      <form id="quick-form" class="stack" novalidate>
+        <div class="field card">
+          <label for="quick-html">Raw HTML</label>
+          <textarea id="quick-html" rows="18" spellcheck="false" class="code" aria-describedby="quick-html-error"></textarea>
+          <p id="quick-html-error" class="field-error" hidden></p>
+        </div>
+        <div class="actions">
+          <button type="submit" id="quick-button" class="primary">Check Pasted HTML</button>
+          <button type="button" id="quick-open" disabled>Open Report</button>
+          <a id="quick-download" class="button" hidden>Download Report</a>
+          <button type="button" id="quick-clear">Clear HTML</button>
+        </div>
+      </form>
+      <section class="card" aria-labelledby="quick-status-heading">
+        <h3 id="quick-status-heading">Quick Check status</h3>
+        <p id="quick-status" class="status-text" role="status" aria-live="polite">Paste an HTML page above, then select Check Pasted HTML.</p>
+      </section>
+    </section>
+
+    <!-- Quiz Library -->
+    <section id="panel-quiz" role="tabpanel" aria-labelledby="tab-quiz" tabindex="0" hidden>
+      <h2>Quiz Library Search</h2>
+      <p class="muted">Load quiz and question-library content from the export chosen on the Accessibility Scan tab, then search all questions on one page.</p>
+      <div class="actions">
+        <button type="button" id="quiz-load" class="primary">Load Quiz Library from Selected Export</button>
+      </div>
+      <p id="quiz-status" class="status-text" role="status" aria-live="polite">Choose an export on the Accessibility Scan tab, then load the quiz library.</p>
+      <div class="field">
+        <label for="quiz-search">Search quiz questions</label>
+        <input type="search" id="quiz-search" autocomplete="off" aria-controls="quiz-table">
+      </div>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Quiz questions">
+        <table id="quiz-table">
+          <caption class="visually-hidden">Quiz and question-library questions. Select Review to read a question with its answer choices.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Question Library Folder/Section</th>
+              <th scope="col">Associated Quiz or Survey</th>
+              <th scope="col">Question Text</th>
+              <th scope="col">Source File</th>
+              <th scope="col"><span class="visually-hidden">Actions</span></th>
+            </tr>
+          </thead>
+          <tbody id="quiz-rows">
+            <tr class="empty"><td colspan="5">No quiz questions loaded.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="quiz-dialog" aria-labelledby="quiz-dialog-title">
+    <div class="dialog-header">
+      <h2 id="quiz-dialog-title">Question Review</h2>
+      <p id="quiz-dialog-position" class="muted"></p>
+    </div>
+    <div id="quiz-dialog-body" class="dialog-body"></div>
+    <div class="actions dialog-actions">
+      <button type="button" id="quiz-prev">Previous</button>
+      <button type="button" id="quiz-next">Next</button>
+      <button type="button" id="quiz-close" class="push-right">Close</button>
+    </div>
+  </dialog>
+
+  <footer class="wrap site-footer">
+    <p>Version 1.56 (web)</p>
+  </footer>
+</body>
+</html>
